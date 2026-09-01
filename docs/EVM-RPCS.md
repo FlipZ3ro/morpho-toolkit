@@ -5,7 +5,6 @@ ChainList pages used to verify chain IDs and discover available RPC providers:
 - [Ethereum](https://chainlist.org/chain/1)
 - [Base](https://chainlist.org/chain/8453)
 - [Arbitrum One](https://chainlist.org/chain/42161)
-- [Polygon](https://chainlist.org/chain/137)
 - [Optimism](https://chainlist.org/chain/10)
 - [Robinhood Chain](https://chainlist.org/chain/4663)
 - [HyperEVM](https://chainlist.org/chain/999)

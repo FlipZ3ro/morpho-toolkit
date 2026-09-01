@@ -36,7 +36,6 @@ npm test
 Contoh langsung:
 
 ```bash
-npm run cli -- setup --chain polygon --min-usd 100000
 npm run cli -- flashloan --chain arbitrum --asset WETH --amount '$100000'
 ```
 
@@ -47,4 +46,3 @@ CLI selalu mengambil `.env` dari folder `tools/`, sehingga command aman dijalank
 - RPC dan `PRIVATE_KEY` hanya disimpan di `.env`.
 - `.env.example` berisi template tanpa secret.
 - Jangan memasukkan private key ke `deployments.json`, command line, log, atau dokumentasi.
-

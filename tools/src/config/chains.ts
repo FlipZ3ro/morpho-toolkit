@@ -9,7 +9,6 @@ export const evmChains: EvmChainConfig[] = [
   { key: 'ethereum', chainId: 1, name: 'Ethereum', nativeSymbol: 'ETH', rpcEnv: 'ETHEREUM_RPC_URL', explorer: 'https://etherscan.io', priceSlug: 'ethereum', status: 'active' },
   { key: 'base', chainId: 8453, name: 'Base', nativeSymbol: 'ETH', rpcEnv: 'BASE_RPC_URL', explorer: 'https://basescan.org', priceSlug: 'base', readRpcFallbacks: ['https://mainnet.base.org'], status: 'active' },
   { key: 'arbitrum', chainId: 42161, name: 'Arbitrum One', nativeSymbol: 'ETH', rpcEnv: 'ARBITRUM_RPC_URL', explorer: 'https://arbiscan.io', priceSlug: 'arbitrum', readRpcFallbacks: ['https://arb1.arbitrum.io/rpc'], status: 'active' },
-  { key: 'polygon', chainId: 137, name: 'Polygon', nativeSymbol: 'POL', rpcEnv: 'POLYGON_RPC_URL', explorer: 'https://polygonscan.com', priceSlug: 'polygon', status: 'active' },
   { key: 'optimism', chainId: 10, name: 'OP Mainnet', nativeSymbol: 'ETH', rpcEnv: 'OPTIMISM_RPC_URL', explorer: 'https://optimistic.etherscan.io', priceSlug: 'optimism', status: 'active' },
   { key: 'robinhood', chainId: 4663, name: 'Robinhood Chain', nativeSymbol: 'ETH', rpcEnv: 'ROBINHOOD_RPC_URL', explorer: 'https://robinhoodchain.blockscout.com', status: 'active' },
   { key: 'hyperevm', chainId: 999, name: 'HyperEVM', nativeSymbol: 'HYPE', rpcEnv: 'HYPEREVM_RPC_URL', explorer: 'https://hyperevmscan.io', priceSlug: 'hyperliquid', status: 'active' },

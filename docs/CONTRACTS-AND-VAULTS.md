@@ -1,24 +1,23 @@
 # Morpho contracts dan vault map
 
-Snapshot: 2026-09-01. Dokumen ini mengikuti tepat 11 network yang terdaftar di `tools/src/config/chains.ts`. Address protokol diambil dari dokumentasi deployment resmi Morpho; address executor diambil dari `evm/deployments.json` milik toolkit.
+Snapshot: 2026-09-01. Dokumen ini mengikuti tepat 10 network yang terdaftar di `tools/src/config/chains.ts`. Seluruh address pada dokumen ini adalah kontrak protokol Morpho dari dokumentasi deployment resminya.
 
 ## Kontrak inti per network
 
-| Network | Chain ID | Morpho Blue | Executor toolkit | Adaptive Curve IRM | Oracle Factory | Multicall3 |
-|---|---:|---|---|---|---|---|
-| Ethereum | 1 | `0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb` | `0x3B37aa5574265FC7871848f35f3A91C4d36a8078` | `0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC` | `0x3A7bB36Ee3f3eE32A60e9f2b33c1e5f2E83ad766` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Base | 8453 | `0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x46415998764C29aB2a25CbeA6254146D50D22687` | `0x2DC205F24BCb6B311E5cdf0745B0741648Aebd3d` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Arbitrum One | 42161 | `0x6c247b1F6182318877311737BaC0844bAa518F5e` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA` | `0x98Ce5D183DC0c176f54D37162F87e7eD7f2E41b5` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Polygon | 137 | `0x1bF0c2541F820E775182832f06c0B7Fc27A25f67` | `—` (setup diperlukan) | `0xe675A2161D4a6E2de2eeD70ac98EEBf257FBF0B0` | `0x1ff7895Eb842794c5d07C4c547b6730e61295215` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| OP Mainnet | 10 | `0xce95AfbB8EA029495c66020883F87aaE8864AF92` | `0x4b739BCB859b2F6321961f499F8633AC410F81a2` | `0x8cD70A8F399428456b29546BC5dBe10ab6a06ef6` | `0x1ec408D4131686f727F3Fd6245CF85Bc5c9DAD70` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Robinhood Chain | 4663 | `0x9D53d5E3bd5E8d4Cbfa6DB1ca238AEA02E651010` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x2BD3d5965B26B51814AC95127B2b80dD6CcC0fa1` | `0xB7c16F6F8cF531447Bf27Ca7220f981E79C9cdF2` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| HyperEVM | 999 | `0x68e37dE8d93d3496ae143F2E900490f6280C57cD` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0xD4a426F010986dCad727e8dd6eed44cA4A9b7483` | `0xeb476f124FaD625178759d13557A72394A6f9aF5` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Stable | 988 | `0xa40103088A899514E3fe474cD3cc5bf811b1102e` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x41e846FC8108b8527C1D4EDB4c9564E56442940f` | `0xF24C6eAB91e43EacE18a4e893a48565C09132505` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Monad | 143 | `0xD5D960E8C380B724a48AC59E2DfF1b2CB4a1eAee` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x09475a3D6eA8c314c592b1a3799bDE044E2F400F` | `0xC8659Bcd5279DB664Be973aEFd752a5326653739` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Tempo | 4217 | `0x10EE9AAC980A180dd4DcFc96C746d60B0EA88f97` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x112fd4042E442C3C12C67AD23587b0afe36eB74E` | `0xc2c167BC5cBD833ce58239e85073258F10aD4DF6` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
-| Katana | 747474 | `0xD50F2DffFd62f94Ee4AEd9ca05C61d0753268aBc` | `0x806f94258AA421b5c282B7A043149396d7c9A9D1` | `0x4F708C0ae7deD3d74736594C2109C2E3c065B428` | `0x7D047fB910Bc187C18C81a69E30Fa164f8c536eC` | `0xcA11bde05977b3631167028862bE2a173976CA11` |
+| Network | Chain ID | Morpho Blue | Adaptive Curve IRM | Oracle Factory |
+|---|---:|---|---|---|
+| Ethereum | 1 | `0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb` | `0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC` | `0x3A7bB36Ee3f3eE32A60e9f2b33c1e5f2E83ad766` |
+| Base | 8453 | `0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb` | `0x46415998764C29aB2a25CbeA6254146D50D22687` | `0x2DC205F24BCb6B311E5cdf0745B0741648Aebd3d` |
+| Arbitrum One | 42161 | `0x6c247b1F6182318877311737BaC0844bAa518F5e` | `0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA` | `0x98Ce5D183DC0c176f54D37162F87e7eD7f2E41b5` |
+| OP Mainnet | 10 | `0xce95AfbB8EA029495c66020883F87aaE8864AF92` | `0x8cD70A8F399428456b29546BC5dBe10ab6a06ef6` | `0x1ec408D4131686f727F3Fd6245CF85Bc5c9DAD70` |
+| Robinhood Chain | 4663 | `0x9D53d5E3bd5E8d4Cbfa6DB1ca238AEA02E651010` | `0x2BD3d5965B26B51814AC95127B2b80dD6CcC0fa1` | `0xB7c16F6F8cF531447Bf27Ca7220f981E79C9cdF2` |
+| HyperEVM | 999 | `0x68e37dE8d93d3496ae143F2E900490f6280C57cD` | `0xD4a426F010986dCad727e8dd6eed44cA4A9b7483` | `0xeb476f124FaD625178759d13557A72394A6f9aF5` |
+| Stable | 988 | `0xa40103088A899514E3fe474cD3cc5bf811b1102e` | `0x41e846FC8108b8527C1D4EDB4c9564E56442940f` | `0xF24C6eAB91e43EacE18a4e893a48565C09132505` |
+| Monad | 143 | `0xD5D960E8C380B724a48AC59E2DfF1b2CB4a1eAee` | `0x09475a3D6eA8c314c592b1a3799bDE044E2F400F` | `0xC8659Bcd5279DB664Be973aEFd752a5326653739` |
+| Tempo | 4217 | `0x10EE9AAC980A180dd4DcFc96C746d60B0EA88f97` | `0x112fd4042E442C3C12C67AD23587b0afe36eB74E` | `0xc2c167BC5cBD833ce58239e85073258F10aD4DF6` |
+| Katana | 747474 | `0xD50F2DffFd62f94Ee4AEd9ca05C61d0753268aBc` | `0x4F708C0ae7deD3d74736594C2109C2E3c065B428` | `0x7D047fB910Bc187C18C81a69E30Fa164f8c536eC` |
 
-Keterangan: `Morpho Blue` adalah singleton lender yang dipanggil executor untuk flashloan. `Adaptive Curve IRM` dan `Oracle Factory` adalah dependency resmi Morpho Blue, bukan provider loan alternatif. `Multicall3` dipakai scanner untuk pembacaan batch dan harus tetap diverifikasi bytecode-nya pada RPC target.
+Keterangan: `Morpho Blue` adalah singleton lender untuk flashloan. `Adaptive Curve IRM` dan `Oracle Factory` adalah dependency resmi Morpho Blue, bukan provider loan alternatif.
 
 ## Infrastruktur vault Morpho
 
@@ -29,7 +28,6 @@ Vault adalah wrapper strategi yield; vault bukan endpoint flashloan. Gunakan `Mo
 | Ethereum | `0xA1D94F746dEfa1928926b84fB2596c06926C0405` | `0xD1B8E2dee25c2b89DCD2f98448a7ce87d6F63394` | `0x32BB1c0D48D8b1B3363e86eeB9A0300BAd61ccc1` | `0x3696c5eAe4a7Ffd04Ea163564571E9CD8Ed9364e` | `0x00b8e1509398ED692C3F326CbAf1694F9A881e27` |
 | Base | `0x4501125508079A99ebBebCE205DeC9593C2b5857` | `0xF42D9c36b34c9c2CF3Bc30eD2a52a90eEB604642` | `0x9a1B378C43BA535cDB89934230F0D3890c51C0EB` | `0x5C2531Cbd2cf112Cf687da3Cd536708aDd7DB10a` | `0xAED282B8aD9257BB1272e93aE63A32A53621e412` |
 | Arbitrum One | `0x6b46fa3cc9EBF8aB230aBAc664E37F2966Bf7971` | `0xD8Fc8a85779551e78B516da9f74061cb3b086793` | `0xeF84b1ecEbe43283ec5AF95D7a5c4D7dE0a9859b` | `0xc00eb3c7aD1aE986A7f05F5A9d71aCa39c763C65` | `0x85b66Fe31e6788E5a6825EAe689f4c6c38AF3704` |
-| Polygon | `0xC11a53eE9B1eCc7a068D8e40F8F17926584F97Cf` | `0xEb174FEA51Da241eB3B516959B216e013de2888a` | `0xc0006f52B38625C283dd2f972dD9B779A5851Dd0` | `—` | `—` |
 | OP Mainnet | `0x6128b680b277Bf4Df80DFE9D8c55A498660870ef` | `0xEe9F7C64dD827ED7b5CAA2272936366FAca00CF3` | `0x71B299bDb52b6396429cd1E11c418324502CB434` | `0xD1346be260cd22Eab9E6163010b0D5CbfAAAD32b` | `0xc6945A915Bb7e2A365469f120A33D2FA42951cF3` |
 | Robinhood Chain | `0x0FBad98595b0186dA120E41f77C102beb49f803c` | `0x7a91222F3f7B927bB8fb624593Ca86e111C2F85e` | `0x79370Ed003CE325C088E530d5e8655c99c2993e1` | `—` | `—` |
 | HyperEVM | `0xD7217E5687FF1071356C780b5fe4803D9D967da7` | `0xdf5202e29654e02011611A086f15477880580CAc` | `0xaEff6Ef4B7bbfbAadB18b634A8F11392CBeB72Be` | `0x857B55cEb57dA0C2A83EE08a8dB529B931089aee` | `0x056dd7D4B373ED26c788190085CC6C52B8e7479d` |
@@ -48,10 +46,10 @@ Query GraphQL untuk seluruh network CLI:
 
 ```graphql
 query ToolkitVaultInventory {
-  vaultV2s(first: 1000, where: { chainId_in: [1, 8453, 42161, 137, 10, 4663, 999, 988, 143, 4217, 747474] }) {
+  vaultV2s(first: 1000, where: { chainId_in: [1, 8453, 42161, 10, 4663, 999, 988, 143, 4217, 747474] }) {
     items { address symbol name listed asset { address decimals } chain { id network } }
   }
-  vaults(first: 1000, where: { chainId_in: [1, 8453, 42161, 137, 10, 4663, 999, 988, 143, 4217, 747474] }) {
+  vaults(first: 1000, where: { chainId_in: [1, 8453, 42161, 10, 4663, 999, 988, 143, 4217, 747474] }) {
     items { address symbol name listed asset { address decimals } chain { id network } }
   }
 }
@@ -66,7 +64,6 @@ Snapshot jumlah item yang dikembalikan halaman pertama (`first: 1000`, bukan tot
 | Ethereum | 132 | 359 |
 | Base | 765 | 368 |
 | Arbitrum One | 36 | 78 |
-| Polygon | 7 | 48 |
 | OP Mainnet | 5 | 12 |
 | Robinhood Chain | 9 | 0 |
 | HyperEVM | 14 | 77 |
@@ -81,7 +78,7 @@ Untuk detail satu vault, gunakan endpoint REST cursor/list resmi lalu ambil addr
 https://api.morpho.org/v0/vaults-v2/{chainId}:{vaultAddress}
 ```
 
-Validasi minimum sebelum memakai vault: `chain.id` harus sama dengan RPC target, `listed` harus true, asset harus ERC-20 yang didukung executor, dan address harus memiliki bytecode. Jangan menganggap saldo vault sebagai saldo flashloan; scanner toolkit membaca `balanceOf(asset, Morpho Blue)`.
+Validasi minimum sebelum memakai vault: `chain.id` harus sama dengan RPC target, `listed` harus true, asset harus ERC-20 yang didukung, dan address harus memiliki bytecode. Jangan menganggap saldo vault sebagai saldo flashloan; scanner toolkit membaca `balanceOf(asset, Morpho Blue)`.
 
 ## Update dan verifikasi
 
@@ -89,6 +86,5 @@ Validasi minimum sebelum memakai vault: `chain.id` harus sama dengan RPC target,
 2. Refresh daftar vault melalui query di atas; jangan menyalin daftar lama ke allowlist permanen.
 3. Bandingkan Morpho/IRM/Oracle/Factory dengan [official deployment addresses](https://docs.morpho.org/developers/contracts/addresses/).
 4. Jalankan `npm run cli -- scan --chain <key> --min-usd 100000` untuk saldo terbaru.
-5. Untuk executor baru, deploy melalui `tools setup` dan simpan hasilnya di `evm/deployments.json`.
 
 Referensi API: [Morpho Vaults API](https://docs.morpho.org/developers/api/morpho-vaults/) dan [List Morpho Vaults V2](https://docs.morpho.org/api/vaults-v2/list-v2-vaults/).

@@ -12,7 +12,6 @@ npm run cli -- scan-all --min-usd 100000
 | Ethereum | 100 / 727 | deployed + live-tested | API Morpho + on-chain balance |
 | Base | 31 / 3182 | deployed + live-tested | mayoritas kandidat spam/unpriced ditolak |
 | Arbitrum | 16 / 114 | deployed + live-tested | API Morpho + on-chain balance |
-| Polygon | 5 / 545 | belum deploy | WBTC, MaticX, WETH, USDT0, USDC lolos |
 | Optimism | 3 / 11 | deployed + live-tested | WBTC, USDC, wstETH lolos |
 | Robinhood | 6 / 80 | deployed + live-tested | API Morpho + on-chain balance |
 | HyperEVM | 15 / 55 | deployed + live-tested | API Morpho + on-chain balance |
