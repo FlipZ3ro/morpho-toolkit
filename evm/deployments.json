@@ -1,0 +1,660 @@
+{
+  "_meta": {
+    "morphoRegistry": "@morpho-org/morpho-ts@2.11.0",
+    "tokenRegistry": "evm/stablecoins.json",
+    "verifiedDate": "2026-09-01"
+  },
+  "ethereum": {
+    "chainId": 1,
+    "rpcEnv": "ETHEREUM_RPC_URL",
+    "morpho": "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+    "token": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "tokenSymbol": "USDC",
+    "tokenDecimals": 6,
+    "allowedStablecoins": [
+      "USDC"
+    ],
+    "allowedAssets": [
+      "USDC",
+      "WETH",
+      "cbBTC",
+      "PYUSD"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x3B37aa5574265FC7871848f35f3A91C4d36a8078",
+    "deploymentTx": "0xae717c051709c4c57a2d75556eaa81bbb3748ee282143c0bf631fb5ae32c76c0",
+    "deploymentBlock": 25880673,
+    "allowlistTransactions": {
+      "WETH": "0x1ed6118951b89f0233f8ca4b119797ef45dd3231943f7288a612221aea37d70a",
+      "cbBTC:0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf": "0x91e29f68e0f1743c74c3f89cef5b530cbf9b0ffd5067fcb46b11865981da265a",
+      "PYUSD:0x6c3ea9036406852006290770BEdFcAbA0e23A0e8": "0x796dbde0dc6c970433b38d40771635d43c7495dd0e1aa31505f3e38c73beb367"
+    },
+    "liveTests": [
+      {
+        "token": "USDC",
+        "amount": "1000000000000",
+        "formattedAmount": "1000000 USDC",
+        "transaction": "0xf0e67719075a6dd245b9c77e67a36708aa012d45aac4710a3fcbb062dd5997c3",
+        "block": 25880683,
+        "gasUsed": 129980,
+        "status": "success"
+      },
+      {
+        "token": "WETH",
+        "amount": "1000000000000000000",
+        "formattedAmount": "1 WETH",
+        "transaction": "0x36363299fc6e5e23da802d0409ac154d6e4ba3b2d4823e677c00d0d7072cb19f",
+        "block": 25880700,
+        "gasUsed": 116760,
+        "status": "success"
+      },
+      {
+        "token": "WETH",
+        "amount": "1000000000000000000000",
+        "formattedAmount": "1000 WETH",
+        "transaction": "0xba7d6154198c5c7be539973638e38e7358fd28c43d2ac1b02ba6a37f37b6cdfa",
+        "block": 25880711,
+        "gasUsed": 116770,
+        "status": "success"
+      },
+      {
+        "token": "cbBTC",
+        "amount": "100000000000",
+        "formattedAmount": "1000 cbBTC",
+        "transaction": "0x222961b874daad990532386f19532aeb63dd7f5b8ca14305a0f4c02224af9829",
+        "block": 25881168,
+        "gasUsed": 132534,
+        "status": "success"
+      },
+      {
+        "token": "PYUSD",
+        "amount": "50000000000000",
+        "formattedAmount": "50000000 PYUSD",
+        "transaction": "0x8f0439cf963d6daec70593ba2cc6460d36c560c4b91421e4e07054836cae1761",
+        "block": 25881762,
+        "gasUsed": 133020,
+        "status": "success"
+      }
+    ]
+  },
+  "base": {
+    "chainId": 8453,
+    "rpcEnv": "BASE_RPC_URL",
+    "morpho": "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+    "allowedStablecoins": [
+      "USDC",
+      "USDT",
+      "DAI"
+    ],
+    "allowedAssets": [
+      "USDC",
+      "WETH"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0x3f0c147f79e8487573dd38ca4fbbca5b2374a8d669a9f483b95d7235e8b57ed4",
+    "deploymentBlock": 50727999,
+    "deploymentGasUsed": 773058,
+    "allowlistTransactions": {
+      "WETH": "0x7376cba6c9e5cfa95c4a8691201d76efd916026e8a7cf04d141e7724f547c3ba"
+    },
+    "liveTests": [
+      {
+        "token": "USDC",
+        "amount": "1000000",
+        "formattedAmount": "1 USDC",
+        "transaction": "0xbdb275cce1fde64ab188264654ac04e8b73bc7794120594f2402fb1aea2bf833",
+        "block": 50728056,
+        "gasUsed": 129492,
+        "status": "success"
+      },
+      {
+        "token": "WETH",
+        "amount": "40438535287659571963",
+        "formattedAmount": "40.438535287659571963 WETH",
+        "usdTarget": "100000",
+        "ethUsdFeedPrice": "2472.88877524",
+        "transaction": "0x5a6fd959ea80895606a9da06c923923f3b09487c1898a4b092885e0ff68fe89a",
+        "block": 50728329,
+        "gasUsed": 116008,
+        "status": "success"
+      },
+      {
+        "token": "USDe",
+        "amount": "30000000000000000000000000",
+        "formattedAmount": "30000000 USDe",
+        "transaction": "0x8aad02db2ca94264527bab9396cfaea8f11e9eea789dde2932ea7dccd3170361",
+        "block": 50733957,
+        "gasUsed": 117372,
+        "status": "success"
+      }
+    ]
+  },
+  "arbitrum": {
+    "chainId": 42161,
+    "rpcEnv": "ARBITRUM_RPC_URL",
+    "morpho": "0x6c247b1F6182318877311737BaC0844bAa518F5e",
+    "allowedStablecoins": [
+      "USDC",
+      "USDT",
+      "DAI"
+    ],
+    "allowedAssets": [
+      "USDC",
+      "WETH",
+      "GVLT",
+      "wstETH"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0xb9d9973671d39b72cc9b931d4f27cbe647b90090df2b1cefa52fafc0ff4219ed",
+    "deploymentBlock": 500552910,
+    "deploymentGasUsed": 776991,
+    "allowlistTransactions": {
+      "WETH": "0xc402d01bf680397f3cb59439a3887de5a406079efb2b21781746edcf585b0b97",
+      "GVLT:0x57587e47A0aF9d1BB93c0D4B3df671B053aB4366": "0x6442628df4a2598cf973990b5a7b35d86a0fe04c7bd125ef896589f5420557c6",
+      "wstETH:0x5979D7b546E38E414F7E9822514be443A4800529": "0x74ca01960f538d204c4cdbec45d8fd60cfd43bd44832e6fce6af0f17d0cb5a29"
+    },
+    "liveTests": [
+      {
+        "token": "USDC",
+        "amount": "1000000",
+        "formattedAmount": "1 USDC",
+        "transaction": "0x9f2cf59ebc0b95ee452f413b7aa0317fcbf7d34145e8a437ec82d3914f7b390a",
+        "block": 500553319,
+        "gasUsed": 129820,
+        "status": "success"
+      },
+      {
+        "token": "WETH",
+        "amount": "40460182730944250648",
+        "formattedAmount": "40.460182730944250648 WETH",
+        "usdTarget": "100000",
+        "ethUsdFeedPrice": "2471.56570362",
+        "transaction": "0x4fa9f0d580a0330bc754560dae8f865db02110c8faee3c400bcaef5287a97ff1",
+        "block": 500555608,
+        "gasUsed": 127672,
+        "status": "success"
+      },
+      {
+        "token": "WETH",
+        "amount": "400000000000000000000",
+        "formattedAmount": "400 WETH",
+        "transaction": "0x40e7642261629795762f558c78d8e7b1f4c66fd1a48d3512a84f9f012e37e4bc",
+        "block": 500577158,
+        "gasUsed": 127759,
+        "status": "success-recovered-from-rpc"
+      },
+      {
+        "token": "WETH",
+        "amount": "400000000000000000000",
+        "formattedAmount": "400 WETH",
+        "transaction": "0x19e91aaac80742f9d5f22c127ba58e91c142196ac3041f93e88829382bfe1a7c",
+        "block": 500578912,
+        "gasUsed": 127691,
+        "status": "success"
+      },
+      {
+        "token": "GVLT",
+        "amount": "50000000000000000000000",
+        "formattedAmount": "50000 GVLT",
+        "transaction": "0x31d8e2d62d4d33737a2f48f4d0709e744e0c30fa21783aa2158aad67e93bd4de",
+        "block": 500583266,
+        "gasUsed": 118920,
+        "status": "success"
+      },
+      {
+        "token": "wstETH",
+        "amount": "1000000000000000000000",
+        "formattedAmount": "1000 wstETH",
+        "transaction": "0x2f67069d02ed63603a04d538c499e693a177fa25e59bfff9fae9e07988b7195b",
+        "block": 500599544,
+        "gasUsed": 124811,
+        "status": "success"
+      }
+    ]
+  },
+  "polygon": {
+    "chainId": 137,
+    "rpcEnv": "POLYGON_RPC_URL",
+    "morpho": "0x1bF0c2541F820E775182832f06c0B7Fc27A25f67",
+    "token": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+    "tokenSymbol": "USDC",
+    "tokenDecimals": 6,
+    "status": "address-and-bytecode-verified",
+    "executor": ""
+  },
+  "bsc": {
+    "chainId": 56,
+    "rpcEnv": "BSC_RPC_URL",
+    "morpho": "0x01b0Bd309AA75547f7a37Ad7B1219A898E67a83a",
+    "allowedStablecoins": [
+      "USDC",
+      "USDT",
+      "DAI"
+    ],
+    "status": "disabled-low-liquidity",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0x65e2fb04f46b7d533cda346d6b0f7ccb2e0b90c44b397afdeb54b055d235d838",
+    "deploymentBlock": 119298234,
+    "deploymentGasUsed": 773058,
+    "liveTests": [
+      {
+        "token": "USDT",
+        "amount": "1000000000000000000",
+        "formattedAmount": "1 USDT",
+        "transaction": "0xfbdee6a861fc1a1f8a6a13898b9f639aa610743ce731e40462661dffad1a8d82",
+        "block": 119298482,
+        "gasUsed": 118383,
+        "status": "success"
+      }
+    ]
+  },
+  "optimism": {
+    "chainId": 10,
+    "rpcEnv": "OPTIMISM_RPC_URL",
+    "morpho": "0xce95AfbB8EA029495c66020883F87aaE8864AF92",
+    "token": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+    "tokenSymbol": "USDC",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "USDC",
+      "WETH",
+      "WBTC"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x4b739BCB859b2F6321961f499F8633AC410F81a2",
+    "deploymentTx": "0x29c4d6fffee837eb5314990f260593f4fe98dca8b41124df6796605224328c52",
+    "deploymentBlock": 156323907,
+    "deploymentGasUsed": 724020,
+    "allowlistTransactions": {
+      "WETH": "0x4019df189424e9ecc91b0c8672d7abe9d83b44f86823c8c57e1980ce71dabecf",
+      "WBTC:0x68f180fcCe6836688e9084f035309E29Bf0A2095": "0x8510148d104ca86cf82cdd36b934f41949c635918ab6c848060518c5827b816b"
+    },
+    "liveTests": [
+      {
+        "token": "USDC",
+        "amount": "1000000",
+        "formattedAmount": "1 USDC",
+        "transaction": "0x6ae912c9fd4618da82c67a8e7683c117aaf82542daf035a4e2509a2eb95e94e5",
+        "block": 156323935,
+        "gasUsed": 129492,
+        "status": "success"
+      },
+      {
+        "token": "USDC",
+        "amount": "100000000000",
+        "formattedAmount": "100000 USDC",
+        "transaction": "0xf35111f65660463e8a58a49a55afa6501c6ecb447a7674e12978035eccd779f1",
+        "block": 156324081,
+        "gasUsed": 129501,
+        "status": "success"
+      },
+      {
+        "token": "WBTC",
+        "amount": "1000000000",
+        "formattedAmount": "10 WBTC",
+        "transaction": "0xca7e319b1229842b622d2aa91378cd069e04211f2e1679ba7e309e0b943e222c",
+        "block": 156326926,
+        "gasUsed": 118706,
+        "status": "success"
+      },
+      {
+        "token": "USDC",
+        "amount": "100000000000",
+        "formattedAmount": "100000 USDC",
+        "transaction": "0xef66728108dd37fb199fe74da41d40fbd74757264040209a11fdfc4c1765fedc",
+        "block": 156327021,
+        "gasUsed": 129501,
+        "status": "success"
+      },
+      {
+        "token": "WBTC",
+        "amount": "1000000000",
+        "formattedAmount": "10 WBTC",
+        "transaction": "0x752c5d062b188899550afb70ef818057d10bb555d769a9cbfc29311b5d0dc7f0",
+        "block": 156329258,
+        "gasUsed": 118706,
+        "status": "success"
+      }
+    ],
+    "blockedTests": [
+      {
+        "token": "WETH",
+        "amount": "40451692016228128437",
+        "formattedAmount": "40.451692016228128437 WETH",
+        "usdTarget": "100000",
+        "providerBalance": "24866900089027473583",
+        "reason": "insufficient-morpho-liquidity",
+        "simulation": "transfer reverted",
+        "broadcast": false
+      }
+    ]
+  },
+  "robinhood": {
+    "chainId": 4663,
+    "rpcEnv": "ROBINHOOD_RPC_URL",
+    "morpho": "0x9D53d5E3bd5E8d4Cbfa6DB1ca238AEA02E651010",
+    "token": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+    "tokenSymbol": "USDG",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "USDG",
+      "WETH",
+      "USDe"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0xedd4135b8cfee7f28c4fb6045feb50cb1a6b859e3bea404bc92ac6cbd9216e44",
+    "deploymentBlock": 51530130,
+    "deploymentGasUsed": 724020,
+    "allowlistTransactions": {
+      "WETH": "0x48cb0fd0d1dac10ed1d8c3f3a779321b7cd925cbdf0e7f5d40bd29e7f41e2f2b",
+      "USDe:0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34": "0x7faa04c2b7c5dd873257a056c9e6a9837469b61c3ab3b27e016df2dd870f5c6e"
+    },
+    "liveTests": [
+      {
+        "token": "USDG",
+        "amount": "1000000",
+        "formattedAmount": "1 USDG",
+        "transaction": "0xeb6798e042818a7301dd5d660715d262c54487cd0d4ebc19acd29af8b392ddb5",
+        "block": 51530828,
+        "gasUsed": 133301,
+        "status": "success"
+      },
+      {
+        "token": "USDG",
+        "amount": "100000000000",
+        "formattedAmount": "100000 USDG",
+        "transaction": "0xf09e75af01a654b1864066215f89a73694a7f1905372c15950e9cf1260492938",
+        "block": 51533724,
+        "gasUsed": 133311,
+        "status": "success"
+      },
+      {
+        "token": "USDe",
+        "amount": "1000391229230870144000000",
+        "formattedAmount": "1000391.229230870144 USDe",
+        "usdTarget": "1000000",
+        "transaction": "0x7e13cf4047ef5e8fe2db6fd0c2f20f89df02a9830c1dbbf62316f504a684eb73",
+        "block": 51574778,
+        "gasUsed": 117323,
+        "status": "success"
+      },
+      {
+        "token": "USDe",
+        "amount": "10000000000000000000000000",
+        "formattedAmount": "10000000 USDe",
+        "transaction": "0x00cddde44cd0cdb1d0712903cdda5e3aae405c9ffeb6a308c8b2e096e3f45023",
+        "block": 51636784,
+        "gasUsed": 117331,
+        "status": "success"
+      }
+    ],
+    "blockedTests": [
+      {
+        "token": "WETH",
+        "amount": "40451692016228128437",
+        "formattedAmount": "40.451692016228128437 WETH",
+        "usdTarget": "100000",
+        "providerBalance": "2933477006281838547",
+        "reason": "insufficient-morpho-liquidity",
+        "simulation": "transfer reverted",
+        "broadcast": false
+      }
+    ]
+  },
+  "avalanche": {
+    "chainId": 43114,
+    "rpcEnv": "AVALANCHE_RPC_URL",
+    "morpho": "0x895383274303AA19fe978AFB4Ac55C7f094f982C",
+    "token": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+    "tokenSymbol": "USDC",
+    "tokenDecimals": 6,
+    "status": "official-address-awaiting-bytecode-and-liquidity-scan",
+    "executor": ""
+  },
+  "hyperevm": {
+    "chainId": 999,
+    "rpcEnv": "HYPEREVM_RPC_URL",
+    "morpho": "0x68e37dE8d93d3496ae143F2E900490f6280C57cD",
+    "token": "0xb88339CB7199b77E23DB6E890353E22632Ba630f",
+    "tokenSymbol": "USDC",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "USDC"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0xa26720a8a15c7ef1ed04363f2e953f02bdb1cc211d59eb71e1440498d03ac8e8",
+    "deploymentBlock": 44723452,
+    "deploymentGasUsed": 724020,
+    "liveTests": [
+      {
+        "token": "USDC",
+        "amount": "1000000",
+        "formattedAmount": "1 USDC",
+        "transaction": "0x0db276a50da2d6273cc521047ae341f9c5a1d7332c1278da47a0c1dcaa44f6e8",
+        "block": 44723576,
+        "gasUsed": 129492,
+        "status": "success"
+      },
+      {
+        "token": "USDC",
+        "amount": "100000000000",
+        "formattedAmount": "100000 USDC",
+        "transaction": "0xdaf827fe4c2d4b1f5cc6a58dc7519462a2f4cf6fef7a5ce68ec73238303f0915",
+        "block": 44723873,
+        "gasUsed": 129501,
+        "status": "success"
+      }
+    ]
+  },
+  "stable": {
+    "chainId": 988,
+    "rpcEnv": "STABLE_RPC_URL",
+    "morpho": "0xa40103088A899514E3fe474cD3cc5bf811b1102e",
+    "token": "0x779ded0c9e1022225f8e0630b35a9b54be713736",
+    "tokenSymbol": "USDT0",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "USDT0",
+      "sthUSD"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0x9fad1f270c08d9b58b427a051a85bc5a1cf39ae7c5681a955ce654c597a5a080",
+    "deploymentBlock": 37714203,
+    "deploymentGasUsed": 724020,
+    "liveTests": [
+      {
+        "token": "USDT0",
+        "amount": "1000000",
+        "formattedAmount": "1 USDT0",
+        "transaction": "0x1eec73052af4ad619b440d59e314d2fd5c3064a27158473f902c5877c5c64d5d",
+        "block": 37714357,
+        "gasUsed": 130604,
+        "status": "success"
+      },
+      {
+        "token": "USDT0",
+        "amount": "100000000000",
+        "formattedAmount": "100000 USDT0",
+        "transaction": "0xc6838be92b24658325a41c1916c7d85ce96c85d83fc6f2e1004b3dc74a2eb3e0",
+        "block": 37714776,
+        "gasUsed": 130614,
+        "status": "success"
+      },
+      {
+        "token": "sthUSD",
+        "amount": "985038253956",
+        "formattedAmount": "985038.253956 sthUSD",
+        "usdTarget": "1000000",
+        "transaction": "0x4cb097828c3a39a91be7ec7ee2264d07d6c1c6036c55d2ddefa43755a913ab12",
+        "block": 37719919,
+        "gasUsed": 123900,
+        "status": "success"
+      }
+    ],
+    "allowlistTransactions": {
+      "sthUSD:0xd1dB209087516883Ec705CFEB99e80BB6032d540": "0xf98c8e8e5662c7772dbc6964f7a5292b38ab0c77efd29fb7a7c702c389dfb66b"
+    }
+  },
+  "monad": {
+    "chainId": 143,
+    "rpcEnv": "MONAD_RPC_URL",
+    "morpho": "0xD5D960E8C380B724a48AC59E2DfF1b2CB4a1eAee",
+    "token": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+    "tokenSymbol": "USDC",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "USDC",
+      "aHYPER"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0x6b35f43bd43bc199f0887d61c2782fed5a2784e6baf9345a3f5c98125f416af4",
+    "deploymentBlock": 100978673,
+    "deploymentGasUsed": 957749,
+    "liveTests": [
+      {
+        "token": "USDC",
+        "amount": "1000000",
+        "formattedAmount": "1 USDC",
+        "transaction": "0xb994a5ad255b56601d1fb34d76781223030dae183f4d1160a55f7280f2b56662",
+        "block": 100979016,
+        "gasUsed": 241154,
+        "status": "success"
+      },
+      {
+        "token": "USDC",
+        "amount": "100000000000",
+        "formattedAmount": "100000 USDC",
+        "transaction": "0xb52d37a3d15def7cd9dd68963cfb9ef81f1fb0abe97fc33a716bb0f2ed4fac26",
+        "block": 100979988,
+        "gasUsed": 241166,
+        "status": "success"
+      },
+      {
+        "token": "aHYPER",
+        "amount": "1000000000000",
+        "formattedAmount": "1000000 aHYPER",
+        "transaction": "0x2e3fe7f4da08a4434a12fe3adac25fb848a6362f88589b044eb4fe12ff5e9144",
+        "block": 100997447,
+        "gasUsed": 274104,
+        "status": "success"
+      }
+    ],
+    "allowlistTransactions": {
+      "aHYPER:0x7Cd231120a60F500887444a9bAF5e1BD753A5e59": "0xb785289d13e14b3450ec229faba9708abb2edc09f6141bc0d5561d5bad9f3a61"
+    }
+  },
+  "mantle": {
+    "chainId": 5000,
+    "rpcEnv": "MANTLE_RPC_URL",
+    "morpho": "",
+    "token": "",
+    "status": "unsupported-no-morpho-deployment",
+    "executor": ""
+  },
+  "tempo": {
+    "chainId": 4217,
+    "rpcEnv": "TEMPO_RPC_URL",
+    "morpho": "0x10EE9AAC980A180dd4DcFc96C746d60B0EA88f97",
+    "token": "0x20c0000000000000000000000000000000000000",
+    "tokenSymbol": "pathUSD",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "pathUSD",
+      "cbBTC"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0xcabbeb21447235c75b198358e01bd61943b70fdd910af7d023d7642b3af84c05",
+    "deploymentBlock": 37465351,
+    "deploymentGasUsed": 4030004,
+    "liveTests": [
+      {
+        "token": "pathUSD",
+        "amount": "1000000",
+        "formattedAmount": "1 pathUSD",
+        "transaction": "0x8d5836f89e9de06f11e06f40c68ceec0473d9e4aa4bb0389b1e0572e0fd3e1e1",
+        "block": 37465507,
+        "gasUsed": 76730,
+        "status": "success"
+      },
+      {
+        "token": "pathUSD",
+        "amount": "100000000000",
+        "formattedAmount": "100000 pathUSD",
+        "usdTarget": "100000",
+        "transaction": "0xf4aeec34401188a0a478689db037fa16b0418325bc8751802e287a8bbed9fc08",
+        "block": 37465837,
+        "gasUsed": 76742,
+        "status": "success"
+      },
+      {
+        "token": "cbBTC",
+        "amount": "100000000",
+        "formattedAmount": "100 cbBTC",
+        "transaction": "0xb306873b38ab8e3e8a95f030e77da8edce1c296071da06928de76f21ae3fec89",
+        "block": 37475656,
+        "gasUsed": 78526,
+        "status": "success"
+      }
+    ],
+    "allowlistTransactions": {
+      "cbBTC:0x20C000000000000000000000c412Ec89D0c08be5": "0x0beb86f8eaa7c0403ef4ba9627453b3912ff76bf9cd3f7d2f9a91d820b7dcfa8"
+    }
+  },
+  "katana": {
+    "chainId": 747474,
+    "rpcEnv": "KATANA_RPC_URL",
+    "morpho": "0xD50F2DffFd62f94Ee4AEd9ca05C61d0753268aBc",
+    "token": "0x203A662b0BD271A6ed5a60EdFbd04bFce608FD36",
+    "tokenSymbol": "vbUSDC",
+    "tokenDecimals": 6,
+    "allowedAssets": [
+      "vbUSDC",
+      "weETH"
+    ],
+    "status": "deployed-and-live-flashloan-verified",
+    "executor": "0x806f94258AA421b5c282B7A043149396d7c9A9D1",
+    "deploymentTx": "0x7e34f01058775ba80abec8b37bd709f27c10c158b77ca66b7d62da60bb61228f",
+    "deploymentBlock": 41504689,
+    "deploymentGasUsed": 724020,
+    "liveTests": [
+      {
+        "token": "vbUSDC",
+        "amount": "1000000",
+        "formattedAmount": "1 vbUSDC",
+        "transaction": "0x31a7409d379a946c298a1dce9aab7615eeeb0899ff359d9e7c75d78a501864f3",
+        "block": 41504775,
+        "gasUsed": 127663,
+        "status": "success"
+      },
+      {
+        "token": "vbUSDC",
+        "amount": "100000000000",
+        "formattedAmount": "100000 vbUSDC",
+        "usdTarget": "100000",
+        "transaction": "0x49b8c387c88fcf3a99b2e0cbfabdfbab77fa153ebf3d932b1952461f5a71c964",
+        "block": 41504959,
+        "gasUsed": 127672,
+        "status": "success"
+      },
+      {
+        "token": "weETH",
+        "amount": "200000000000000000000",
+        "formattedAmount": "200 weETH",
+        "transaction": "0x0845ae33cb9a5119833e8794ef4aba30f727a3e84d3f2b65ca31296223ca8b04",
+        "block": 41509574,
+        "gasUsed": 126030,
+        "status": "success"
+      }
+    ],
+    "allowlistTransactions": {
+      "weETH:0x9893989433e7a383Cb313953e4c2365107dc19a7": "0x056f8e05effeea967b2d9e2ec4a613c4ba1950ae6f9a0f57951b3712664f6fb0"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "morpho-allchain-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "tsc --noEmit", "test": "tsx --test src/morpho/*.test.ts", "start": "tsx src/commands/status.ts", "cli": "tsx src/cli.ts", "dry-run": "tsx src/commands/dry-run.ts"},
+  "dependencies": {"viem": "^2.21.0", "dotenv": "^16.4.5"},
+  "devDependencies": {"@types/node": "^22.0.0", "tsx": "^4.19.0", "typescript": "^5.6.0"}
+}

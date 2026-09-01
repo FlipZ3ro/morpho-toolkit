@@ -1,0 +1,13 @@
+# Secrets and local runtime files
+tools/.env
+tools/node_modules/
+tools/dist/
+
+# Foundry generated output and local broadcast/cache data
+evm/out/
+evm/cache/
+evm/broadcast/
+
+# OS/editor files
+.DS_Store
+*.log
