@@ -2,13 +2,13 @@
   <img src="assets/evm-loan-toolkit-banner.png" alt="EVM Loan Toolkit banner" width="100%" />
 </p>
 
-# EVM-LOAN-TOOLKIT — Morpho All-Chain
+# ⚡ EVM-LOAN-TOOLKIT — Morpho All-Chain
 
 Modul ini berisi implementasi Morpho Blue EVM: scanner likuiditas, Solidity flashloan executor, deployment registry, TypeScript CLI, dan dokumentasi operasional.
 
 > **Mainnet warning:** `setup --broadcast` dan `flashloan` mengirim transaksi sungguhan. Gunakan wallet khusus, periksa chain/token/nominal, dan jangan pernah commit private key.
 
-## Status fitur
+## ✅ Status fitur
 
 | Komponen | Status |
 |---|---|
@@ -22,7 +22,7 @@ Modul ini berisi implementasi Morpho Blue EVM: scanner likuiditas, Solidity flas
 
 Morpho fee flashloan adalah nol, tetapi network gas tetap dibayar. Liquidity, price, dan provider state harus discan ulang sebelum transaksi.
 
-## Struktur folder
+## 🗂️ Struktur folder
 
 ```text
 Morpho/
@@ -54,7 +54,7 @@ Morpho/
 
 `deployments.json` adalah registry address/status. `stablecoins.json` hanya seed token; scanner juga menemukan loan/collateral asset dari Morpho API.
 
-## Network registry
+## 🌐 Network registry
 
 | Network | Chain ID | Status |
 |---|---:|---|
@@ -71,9 +71,9 @@ Morpho/
 
 Status berubah setiap block. Jalankan `chains` dan scan ulang sebelum broadcast.
 
-## Instalasi dari awal
+## 🛠️ Instalasi dari awal
 
-### Prasyarat
+### 📋 Prasyarat
 
 - Linux/macOS atau WSL2, Git.
 - Node.js current LTS (disarankan 20+) dan npm.
@@ -96,7 +96,7 @@ forge --version
 cast --version
 ```
 
-### Dependency dan environment
+### 🔐 Dependency dan environment
 
 ```bash
 cd Morpho/tools
@@ -123,7 +123,7 @@ KATANA_RPC_URL=https://...
 
 `PRIVATE_KEY` harus `0x` + 64 karakter hex. Jangan taruh key di command line, README, screenshot, atau registry. Owner key harus sama dengan `owner()` executor existing. Wallet tetap memerlukan native gas walau fee protocol nol.
 
-### Build dan test
+### 🧪 Build dan test
 
 ```bash
 cd ../evm
@@ -137,7 +137,7 @@ npm test
 
 Artifact `evm/out/FlashLoanExecutor.sol/FlashLoanExecutor.json` diperlukan saat deploy executor baru.
 
-## CLI
+## 💻 CLI
 
 Semua command dijalankan dari `Morpho/tools`:
 
@@ -147,7 +147,7 @@ npm run cli
 
 Menu: `1 LIQUIDITY SCAN`, `2 EXECUTOR SETUP`, `3 RUN FLASHLOAN`, `0 EXIT`.
 
-### Status dan scan
+### 🔎 Status dan scan
 
 ```bash
 npm run cli -- chains
@@ -160,7 +160,7 @@ npm run cli -- scan --chain base --token 0xTokenAddress --json
 
 Scanner memvalidasi chain ID dan bytecode Morpho, discovery market, metadata ERC-20, balance `balanceOf(Morpho)` melalui Multicall3, harga Morpho API/fallback DefiLlama, lalu threshold dan price age.
 
-### Setup executor dan allowlist
+### 🛡️ Setup executor dan allowlist
 
 ```bash
 npm run cli -- setup --chain ethereum --select USDC,WETH --plan
@@ -170,7 +170,7 @@ npm run cli -- setup --chain ethereum --select USDC,WETH --broadcast --yes
 
 `--select` menerima nomor (`1,3`), simbol (`USDC,WETH`), address, atau `all`. Executor existing hanya disinkronkan; `--redeploy` memaksa deployment baru.
 
-### Flashloan
+### ⚡ Flashloan
 
 Amount berupa unit token atau target USD:
 
@@ -185,7 +185,7 @@ Satu transaksi hanya menerima satu aset. CLI scan balance terbaru, auto-allowlis
 
 Flag utama: `--chain`, `--min-usd`, `--max-price-age-hours`, `--token`, `--select`, `--asset`, `--amount`, `--plan`, `--broadcast`, `--yes`, `--redeploy`, `--json`.
 
-## Deployment manual Foundry
+## 🚀 Deployment manual Foundry
 
 ```bash
 cd Morpho/evm
@@ -198,7 +198,7 @@ forge script script/Deploy.s.sol:Deploy \
 
 Verifikasi `owner()`, `morpho()`, bytecode, dan allowlist setelah deployment. Simpan hasil ke `deployments.json` tanpa private key.
 
-## Fungsi executor
+## 📜 Fungsi executor
 
 Contract ada di `evm/src/FlashLoanExecutor.sol`.
 
@@ -212,7 +212,7 @@ Contract ada di `evm/src/FlashLoanExecutor.sol`.
 
 Callback menolak caller selain Morpho, token/amount mismatch, nested loan, token tidak di-allowlist, dan repayment yang tidak tepat. Approval dibatasi sebesar principal.
 
-## Fungsi arbitrase
+## 📈 Fungsi arbitrase
 
 Executor live saat ini adalah **no-op flashloan**. Callback tidak melakukan swap dan invariant saldo akhir harus sama dengan saldo awal. Profit tambahan akan membuat executor sekarang revert; jangan memakainya sebagai arb executor.
 
@@ -237,7 +237,7 @@ netProfit   = grossProfit - DEX fees - gas - builder/bribe cost
 
 Guard wajib: router/adapter dan selector allowlist, deadline, `minAmountOut`, `minProfit`, approval terbatas, reentrancy/state guard, route chain-specific, dan simulasi full transaction. Tolak fee-on-transfer/rebasing token yang belum diuji. Venue swap sengaja belum di-hardcode.
 
-## Troubleshooting
+## 🧯 Troubleshooting
 
 - `Archive requests require a personal token`: Base dan Arbitrum memakai endpoint resmi sebagai read/receipt fallback. Periksa hash di explorer sebelum mengirim ulang.
 - `0 funded assets`: `balance-read-failed` berarti RPC/call gagal; `metadata-unavailable` berarti ERC-20/RPC bermasalah; `price-missing-or-stale` berarti harga tidak segar; `below-minimum-usd` berarti di bawah filter.
@@ -246,7 +246,7 @@ Guard wajib: router/adapter dan selector allowlist, deadline, `minAmountOut`, `m
 - `artifact bytecode kosong`: jalankan `cd Morpho/evm && forge build`.
 - `insufficient funds for gas`: isi native token chain target.
 
-## Checklist mainnet
+## ✅ Checklist mainnet
 
 - [ ] Chain ID RPC, Morpho address, bytecode, owner, dan token benar.
 - [ ] Balance terbaru dan harga segar cukup.
@@ -255,7 +255,7 @@ Guard wajib: router/adapter dan selector allowlist, deadline, `minAmountOut`, `m
 - [ ] Simulasi berhasil dan explorer hash dicatat.
 - [ ] Untuk arb: route, deadline, minOut, gas, dan minProfit dihitung.
 
-## Referensi
+## 📚 Referensi
 
 - [Morpho contract API](https://docs.morpho.org/developers/contracts/morpho/)
 - [Morpho deployment addresses](https://docs.morpho.org/developers/contracts/addresses/)
@@ -263,3 +263,10 @@ Guard wajib: router/adapter dan selector allowlist, deadline, `minAmountOut`, `m
 - [Node.js downloads](https://nodejs.org/en/download)
 - [`evm/README.md`](evm/README.md)
 - [`tools/README.md`](tools/README.md)
+
+## 💸 Donate
+
+If this helped you, support the dev:
+
+- **EVM:** `0x9Cd42f217574aA4418C9C7a8770f2711401caFfd`
+- **SOL:** `QWXyYvMnLsSLBqWTDVmSvnPK8TYMdozozNaEMpMhepo`
