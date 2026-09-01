@@ -239,10 +239,6 @@ netProfit   = grossProfit - DEX fees - gas - builder/bribe cost
 
 Guard wajib: router/adapter dan selector allowlist, deadline, `minAmountOut`, `minProfit`, approval terbatas, reentrancy/state guard, route chain-specific, dan simulasi full transaction. Tolak fee-on-transfer/rebasing token yang belum diuji. Venue swap sengaja belum di-hardcode.
 
-## Provider backup
-
-Provider backup dan chain di luar toolkit dicatat terpisah di [`../docs/BACKUP-LOAN-PROVIDERS.md`](../docs/BACKUP-LOAN-PROVIDERS.md). Dokumen tersebut bukan daftar network yang dapat dipilih oleh CLI Morpho.
-
 ## Troubleshooting
 
 - `Archive requests require a personal token`: Base dan Arbitrum memakai endpoint resmi sebagai read/receipt fallback. Periksa hash di explorer sebelum mengirim ulang.
