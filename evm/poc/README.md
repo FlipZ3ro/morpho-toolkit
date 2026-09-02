@@ -16,9 +16,15 @@ owner
 ## File
 
 - Contract: `src/poc/MorphoV2ArbitragePOC.sol`
+- Peta ABI DEX: `poc/DEX-SWAP-ABI-MAP.md`
+- Interface adapter: `src/poc/DexSwapInterfaces.sol`
 - Test: `test/MorphoV2ArbitragePOC.t.sol`
 
 Contract dibuat self-contained agar nanti mudah dipindahkan menjadi satu-file Gist.
+
+POC saat ini langsung kompatibel dengan router Uniswap V2 dan Sushi V2. DEX V3,
+Universal Router, Aerodrome/Velodrome, Balancer, dan Curve sudah dipetakan tetapi
+memerlukan adapter masing-masing sebelum dapat dipakai.
 
 ## Menjalankan test
 
