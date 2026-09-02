@@ -1,5 +1,7 @@
 # EVM Flash Loan Contract
 
+POC arbitrase dua router tersedia di [`poc/README.md`](poc/README.md). POC tersebut terpisah dari executor no-op yang digunakan CLI saat ini.
+
 `src/FlashLoanExecutor.sol` adalah executor portable untuk Morpho Blue. Bytecode yang sama dapat dideploy ke semua chain EVM; constructor menerima alamat Morpho lokal dan allowlist token.
 
 ## Deploy parameters
