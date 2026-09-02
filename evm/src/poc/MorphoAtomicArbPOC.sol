@@ -28,7 +28,7 @@ interface IPOCV2Router {
 /// @notice Proof of concept: Morpho flashloan followed by two V2-compatible swaps.
 /// @dev This is intentionally narrow and has no arbitrary-call path. It must be
 ///      configured with explicit token and router allowlists before use.
-contract MorphoV2ArbitragePOC is IPOCMorphoFlashLoanCallback {
+contract MorphoAtomicArbPOC is IPOCMorphoFlashLoanCallback {
     struct ArbitrageParams {
         address loanToken;
         address intermediateToken;

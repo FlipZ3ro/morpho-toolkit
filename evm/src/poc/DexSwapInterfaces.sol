@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-/// @notice Minimal swap ABIs for the adapters planned around MorphoV2ArbitragePOC.
+/// @notice Minimal swap ABIs for the adapters planned around MorphoAtomicArbPOC.
 /// @dev These interfaces do not make a router safe. The adapter must still validate
 ///      router, selector, tokens, recipient, amount, slippage and deadline.
 

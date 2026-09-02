@@ -1,4 +1,4 @@
-# Morpho V2 Arbitrage POC
+# Morpho Atomic Arbitrage POC
 
 POC ini membuktikan alur atomik berikut:
 
@@ -15,10 +15,10 @@ owner
 
 ## File
 
-- Contract: `src/poc/MorphoV2ArbitragePOC.sol`
+- Contract: `src/poc/MorphoAtomicArbPOC.sol`
 - Peta ABI DEX: `poc/DEX-SWAP-ABI-MAP.md`
 - Interface adapter: `src/poc/DexSwapInterfaces.sol`
-- Test: `test/MorphoV2ArbitragePOC.t.sol`
+- Test: `test/MorphoAtomicArbPOC.t.sol`
 
 Contract dibuat self-contained agar nanti mudah dipindahkan menjadi satu-file Gist.
 
@@ -31,7 +31,7 @@ memerlukan adapter masing-masing sebelum dapat dipakai.
 ```bash
 cd Morpho/evm
 forge build
-forge test --match-contract MorphoV2ArbitragePOCTest -vv
+forge test --match-contract MorphoAtomicArbPOCTest -vv
 ```
 
 Test lokal memakai dua mock router dengan rate berikut:

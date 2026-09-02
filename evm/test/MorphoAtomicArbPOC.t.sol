@@ -5,8 +5,8 @@ import {
     IPOCERC20,
     IPOCMorphoFlashLoanCallback,
     IPOCV2Router,
-    MorphoV2ArbitragePOC
-} from "../src/poc/MorphoV2ArbitragePOC.sol";
+    MorphoAtomicArbPOC
+} from "../src/poc/MorphoAtomicArbPOC.sol";
 
 contract POCMockToken is IPOCERC20 {
     mapping(address account => uint256 balance) public balanceOf;
@@ -81,7 +81,7 @@ contract POCMockV2Router is IPOCV2Router {
     }
 }
 
-contract MorphoV2ArbitragePOCTest {
+contract MorphoAtomicArbPOCTest {
     uint256 private constant UNIT = 1e18;
     address private constant PROFIT_RECEIVER = address(0xBEEF);
 
@@ -92,7 +92,7 @@ contract MorphoV2ArbitragePOCTest {
             POCMockMorpho morpho,
             POCMockV2Router firstRouter,
             POCMockV2Router secondRouter,
-            MorphoV2ArbitragePOC poc
+            MorphoAtomicArbPOC poc
         ) = _deployProfitableRoute();
 
         uint256 morphoBalanceBefore = loanToken.balanceOf(address(morpho));
@@ -116,11 +116,11 @@ contract MorphoV2ArbitragePOCTest {
             POCMockMorpho morpho,
             POCMockV2Router firstRouter,
             POCMockV2Router secondRouter,
-            MorphoV2ArbitragePOC poc
+            MorphoAtomicArbPOC poc
         ) = _deployProfitableRoute();
 
         uint256 morphoBalanceBefore = loanToken.balanceOf(address(morpho));
-        MorphoV2ArbitragePOC.ArbitrageParams memory params = _params(
+        MorphoAtomicArbPOC.ArbitrageParams memory params = _params(
             address(loanToken), address(intermediateToken), address(firstRouter), address(secondRouter), 101 * UNIT
         );
 
@@ -136,18 +136,18 @@ contract MorphoV2ArbitragePOCTest {
             POCMockToken intermediateToken,,
             POCMockV2Router firstRouter,
             POCMockV2Router secondRouter,
-            MorphoV2ArbitragePOC poc
+            MorphoAtomicArbPOC poc
         ) = _deployProfitableRoute();
 
         poc.setRouterAllowed(address(secondRouter), false);
-        MorphoV2ArbitragePOC.ArbitrageParams memory params =
+        MorphoAtomicArbPOC.ArbitrageParams memory params =
             _params(address(loanToken), address(intermediateToken), address(firstRouter), address(secondRouter), 1);
         (bool ok,) = address(poc).call(abi.encodeCall(poc.executeArbitrage, (params)));
         require(!ok, "unallowed router accepted");
     }
 
     function testRejectsFakeCallback() external {
-        (,,,,, MorphoV2ArbitragePOC poc) = _deployProfitableRoute();
+        (,,,,, MorphoAtomicArbPOC poc) = _deployProfitableRoute();
         (bool ok,) =
             address(poc).call(abi.encodeWithSelector(poc.onMorphoFlashLoan.selector, 1_000 * UNIT, bytes("fake")));
         require(!ok, "fake callback accepted");
@@ -161,7 +161,7 @@ contract MorphoV2ArbitragePOCTest {
             POCMockMorpho morpho,
             POCMockV2Router firstRouter,
             POCMockV2Router secondRouter,
-            MorphoV2ArbitragePOC poc
+            MorphoAtomicArbPOC poc
         )
     {
         loanToken = new POCMockToken();
@@ -182,7 +182,7 @@ contract MorphoV2ArbitragePOCTest {
         address[] memory routers = new address[](2);
         routers[0] = address(firstRouter);
         routers[1] = address(secondRouter);
-        poc = new MorphoV2ArbitragePOC(address(morpho), tokens, routers);
+        poc = new MorphoAtomicArbPOC(address(morpho), tokens, routers);
     }
 
     function _params(
@@ -191,8 +191,8 @@ contract MorphoV2ArbitragePOCTest {
         address firstRouter,
         address secondRouter,
         uint256 minProfit
-    ) private pure returns (MorphoV2ArbitragePOC.ArbitrageParams memory params) {
-        params = MorphoV2ArbitragePOC.ArbitrageParams({
+    ) private pure returns (MorphoAtomicArbPOC.ArbitrageParams memory params) {
+        params = MorphoAtomicArbPOC.ArbitrageParams({
             loanToken: loanToken,
             intermediateToken: intermediateToken,
             firstRouter: firstRouter,

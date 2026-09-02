@@ -1,6 +1,6 @@
 # DEX Swap ABI Map
 
-Peta ini adalah dasar untuk menambah adapter swap ke `MorphoV2ArbitragePOC`. Fokusnya adalah swap ERC-20 exact-input: nominal input sudah pasti, output dibatasi oleh `amountOutMin`, dan penerima wajib contract POC sendiri.
+Peta ini adalah dasar untuk menambah adapter swap ke `MorphoAtomicArbPOC`. Fokusnya adalah swap ERC-20 exact-input: nominal input sudah pasti, output dibatasi oleh `amountOutMin`, dan penerima wajib contract POC sendiri.
 
 Implementasi Solidity minimal yang dapat di-import atau disalin ada di `src/poc/DexSwapInterfaces.sol`.
 
@@ -19,7 +19,7 @@ Implementasi Solidity minimal yang dapat di-import atau disalin ada di `src/poc/
 | Balancer V2 Vault | `swap` / `batchSwap` | pool ID + asset arrays | Perlu adapter Vault |
 | Curve Router NG | `exchange` | fixed route + swap params | Perlu adapter Curve |
 
-`MorphoV2ArbitragePOC.sol` saat ini hanya menerima router V2-compatible. Karena Sushi V2 mempertahankan ABI Router02, Uniswap V2 dan Sushi V2 dapat dipakai tanpa mengubah ABI POC; alamat router tetap harus di-allowlist per chain.
+`MorphoAtomicArbPOC.sol` saat ini hanya menerima router V2-compatible. Karena Sushi V2 mempertahankan ABI Router02, Uniswap V2 dan Sushi V2 dapat dipakai tanpa mengubah ABI POC; alamat router tetap harus di-allowlist per chain.
 
 ## 1. Uniswap V2 dan Sushi V2
 
